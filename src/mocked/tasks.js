@@ -8,7 +8,7 @@ const BUSINESS_CONTEXT_STATUS = {
   activeTask: "active",
   read: "read",
 };
-const tasksList = [
+let tasksList = [
   {
     title: "Application Setup",
     status: TASK_STATUS.isActive,
