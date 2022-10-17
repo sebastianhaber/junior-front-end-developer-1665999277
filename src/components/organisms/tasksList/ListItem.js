@@ -8,6 +8,7 @@ function ListItem({ task, ...props }) {
   return (
     <StyledListItem
       isBlocked={task.status === TASK_STATUS.isBlocked}
+      isActive={task.status === TASK_STATUS.isActive}
       {...props}
     >
       <img
