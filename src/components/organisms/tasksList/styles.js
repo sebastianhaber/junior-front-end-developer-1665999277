@@ -42,7 +42,13 @@ export const StyledListItem = styled.li`
 
   border-radius: 0.5rem;
 
-  ${(props) => props.isBlocked && `cursor: default;`}
+  ${(props) =>
+    props.isBlocked &&
+    `
+  cursor: default;
+  color: #AEB5C1;
+  `}
+  ${(props) => props.isActive && `font-weight: 600;`}
   &:hover {
     background-color: ${(props) => (props.isBlocked ? `white` : `#0165ff20`)};
   }
