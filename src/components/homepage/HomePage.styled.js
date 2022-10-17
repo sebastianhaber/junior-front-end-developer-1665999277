@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
 export const StyledWrapper = styled.div`
-  height: 100%;
+  flex: 1;
+  display: flex;
+  gap: 1rem;
+  align-items: stretch;
 `;
