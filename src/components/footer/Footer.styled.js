@@ -3,9 +3,12 @@ import styled from "styled-components";
 export const StyledFooter = styled.footer`
   display: flex;
   justify-content: space-between;
+
   font-size: 0.5rem;
   font-weight: 500;
   color: #6b778c;
+
+  padding: 0.5rem 0;
   ul {
     display: flex;
     gap: 1rem;
