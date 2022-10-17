@@ -4,9 +4,9 @@ const TASK_STATUS = {
   isBlocked: "blocked",
 };
 const BUSINESS_CONTEXT_STATUS = {
-  isActive: "active",
-  isSeen: "read",
-  isNotSeen: "not_seen",
+  notRead: "not_read",
+  activeTask: "active",
+  read: "read",
 };
 const tasksList = [
   {
@@ -23,7 +23,7 @@ const tasksList = [
           imageUrl: "../assets/mEZ3PoFGs_k.png",
         },
         createdAt: 1666005008326,
-        status: BUSINESS_CONTEXT_STATUS.isActive,
+        status: BUSINESS_CONTEXT_STATUS.notRead,
       },
       {
         title: "Application has been accepted 🎉🙌",
@@ -35,7 +35,7 @@ const tasksList = [
           imageUrl: "../assets/mEZ3PoFGs_k.png",
         },
         date: 1666005000326,
-        status: BUSINESS_CONTEXT_STATUS.isNotSeen,
+        status: BUSINESS_CONTEXT_STATUS.activeTask,
       },
       {
         title: "New sprint, tasks and intro information.",
@@ -47,7 +47,7 @@ const tasksList = [
           imageUrl: "../assets/mEZ3PoFGs_k.png",
         },
         date: 1666004000326,
-        status: BUSINESS_CONTEXT_STATUS.isSeen,
+        status: BUSINESS_CONTEXT_STATUS.read,
       },
     ],
   },
@@ -65,7 +65,7 @@ const tasksList = [
           imageUrl: "../assets/mEZ3PoFGs_k.png",
         },
         createdAt: 1666005008326,
-        status: BUSINESS_CONTEXT_STATUS.isActive,
+        status: BUSINESS_CONTEXT_STATUS.notRead,
       },
       {
         title: "Application has been accepted 🎉🙌",
@@ -77,7 +77,7 @@ const tasksList = [
           imageUrl: "../assets/mEZ3PoFGs_k.png",
         },
         date: 1666005000326,
-        status: BUSINESS_CONTEXT_STATUS.isNotSeen,
+        status: BUSINESS_CONTEXT_STATUS.activeTask,
       },
       {
         title: "New sprint, tasks and intro information.",
@@ -89,7 +89,7 @@ const tasksList = [
           imageUrl: "../assets/mEZ3PoFGs_k.png",
         },
         date: 1666004000326,
-        status: BUSINESS_CONTEXT_STATUS.isSeen,
+        status: BUSINESS_CONTEXT_STATUS.read,
       },
     ],
   },
@@ -107,7 +107,7 @@ const tasksList = [
           imageUrl: "../assets/mEZ3PoFGs_k.png",
         },
         createdAt: 1666005008326,
-        status: BUSINESS_CONTEXT_STATUS.isActive,
+        status: BUSINESS_CONTEXT_STATUS.notRead,
       },
       {
         title: "Application has been accepted 🎉🙌",
@@ -119,7 +119,7 @@ const tasksList = [
           imageUrl: "../assets/mEZ3PoFGs_k.png",
         },
         date: 1666005000326,
-        status: BUSINESS_CONTEXT_STATUS.isNotSeen,
+        status: BUSINESS_CONTEXT_STATUS.activeTask,
       },
       {
         title: "New sprint, tasks and intro information.",
@@ -131,7 +131,7 @@ const tasksList = [
           imageUrl: "../assets/mEZ3PoFGs_k.png",
         },
         date: 1666004000326,
-        status: BUSINESS_CONTEXT_STATUS.isSeen,
+        status: BUSINESS_CONTEXT_STATUS.read,
       },
     ],
   },
@@ -149,7 +149,7 @@ const tasksList = [
           imageUrl: "../assets/mEZ3PoFGs_k.png",
         },
         createdAt: 1666005008326,
-        status: BUSINESS_CONTEXT_STATUS.isActive,
+        status: BUSINESS_CONTEXT_STATUS.notRead,
       },
       {
         title: "Application has been accepted 🎉🙌",
@@ -161,7 +161,7 @@ const tasksList = [
           imageUrl: "../assets/mEZ3PoFGs_k.png",
         },
         date: 1666005000326,
-        status: BUSINESS_CONTEXT_STATUS.isNotSeen,
+        status: BUSINESS_CONTEXT_STATUS.activeTask,
       },
       {
         title: "New sprint, tasks and intro information.",
@@ -173,7 +173,7 @@ const tasksList = [
           imageUrl: "../assets/mEZ3PoFGs_k.png",
         },
         date: 1666004000326,
-        status: BUSINESS_CONTEXT_STATUS.isSeen,
+        status: BUSINESS_CONTEXT_STATUS.read,
       },
     ],
   },
@@ -191,7 +191,7 @@ const tasksList = [
           imageUrl: "../assets/mEZ3PoFGs_k.png",
         },
         createdAt: 1666005008326,
-        status: BUSINESS_CONTEXT_STATUS.isActive,
+        status: BUSINESS_CONTEXT_STATUS.notRead,
       },
       {
         title: "Application has been accepted 🎉🙌",
@@ -203,7 +203,7 @@ const tasksList = [
           imageUrl: "../assets/mEZ3PoFGs_k.png",
         },
         date: 1666005000326,
-        status: BUSINESS_CONTEXT_STATUS.isNotSeen,
+        status: BUSINESS_CONTEXT_STATUS.activeTask,
       },
       {
         title: "New sprint, tasks and intro information.",
@@ -215,7 +215,7 @@ const tasksList = [
           imageUrl: "../assets/mEZ3PoFGs_k.png",
         },
         date: 1666004000326,
-        status: BUSINESS_CONTEXT_STATUS.isSeen,
+        status: BUSINESS_CONTEXT_STATUS.read,
       },
     ],
   },
