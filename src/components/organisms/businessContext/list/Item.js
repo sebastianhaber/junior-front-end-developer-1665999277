@@ -6,6 +6,7 @@ import { StyledItem } from "./List.styles";
 function Item({ item, ...props }) {
   const [date, setDate] = useState("");
   const [message, setMessage] = useState("");
+  const [title, setTitle] = useState("");
 
   // get date
   useEffect(() => {
@@ -13,11 +14,14 @@ function Item({ item, ...props }) {
     setDate(getFormattedDate(timestamp, false, true));
   }, [item.created_at]);
 
-  // substring content
+  // substring title and content
   useEffect(() => {
     const shortMessage = `${item.content.substring(0, 90)}...`;
+    const title = `${item.title.substring(0, 40)}...`;
+
+    setTitle(title);
     setMessage(shortMessage);
-  }, [item.content]);
+  }, [item.content, item.title]);
 
   return (
     <StyledItem
@@ -30,7 +34,7 @@ function Item({ item, ...props }) {
           {item.author.name} • {date}
         </p>
       </div>
-      <div className="title">{item.title}</div>
+      <div className="title">{title}</div>
       <div className="message">{message}</div>
     </StyledItem>
   );
