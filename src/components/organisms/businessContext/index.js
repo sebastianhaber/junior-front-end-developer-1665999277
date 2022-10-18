@@ -4,11 +4,9 @@ import {
 } from "./BusinessContext.styles";
 import DiscoverIcon from "../../../assets/discover_icon.svg";
 import ContextList from "./list/ContextList";
-import { useState } from "react";
 import Content from "./content/Content";
 
-function BusinessContext({ activeTask }) {
-  const [content, setContent] = useState(activeTask?.businessContext[0]);
+function BusinessContext() {
   return (
     <StyledBusinessContextWrapper>
       <header>
@@ -18,8 +16,8 @@ function BusinessContext({ activeTask }) {
         </div>
       </header>
       <ContextWrapper>
-        <ContextList activeTask={activeTask} setContent={setContent} />
-        <Content content={content} />
+        <ContextList />
+        <Content />
       </ContextWrapper>
     </StyledBusinessContextWrapper>
   );

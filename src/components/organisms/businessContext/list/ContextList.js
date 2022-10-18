@@ -1,20 +1,25 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import Item from "./Item";
 import { BUSINESS_CONTEXT_STATUS } from "../../../../mocked/tasks";
 import { StyledList } from "./List.styles";
+import { AppContext } from "../../../../context/Context";
 
-function ContextList({ activeTask, setContent }) {
+function ContextList() {
+  const { activeTask, setActiveBusinessContext } = useContext(AppContext);
+
   const handleChange = (item) => {
-    setContent(item);
+    setActiveBusinessContext(item);
   };
 
   useEffect(() => {
-    setContent(
-      activeTask.businessContext.find(
-        (item) => item.status === BUSINESS_CONTEXT_STATUS.activeTask
-      )
-    );
-  }, [activeTask.businessContext, setContent]);
+    if (activeTask) {
+      setActiveBusinessContext(
+        activeTask.businessContext.find(
+          (item) => item.status === BUSINESS_CONTEXT_STATUS.activeTask
+        )
+      );
+    }
+  }, [activeTask, setActiveBusinessContext]);
 
   return (
     <StyledList>

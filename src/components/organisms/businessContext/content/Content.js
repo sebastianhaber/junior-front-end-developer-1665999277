@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import Image from "../../../../utils/Image";
 import ImageUrl from "../../../../assets/mEZ3PoFGs_k.png";
 import { useState } from "react";
 import { useEffect } from "react";
 import { getFormattedDate, timeAgo } from "../../../../utils/time";
 import { StyledContent } from "./Content.styles";
+import { AppContext } from "../../../../context/Context";
 
-function Content({ content }) {
+function Content() {
+  const { activeBusinessContext: content } = useContext(AppContext);
   const [date, setDate] = useState({
     day: "",
     time: "",
