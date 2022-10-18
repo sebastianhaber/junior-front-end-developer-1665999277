@@ -16,7 +16,7 @@ function Item({ item, ...props }) {
 
   // substring content
   useEffect(() => {
-    const shortMessage = `${item.content.substring(0, 99)}...`;
+    const shortMessage = `${item.content.substring(0, 90)}...`;
     setMessage(shortMessage);
   }, [item.content]);
 
