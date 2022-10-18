@@ -14,12 +14,23 @@ export const AppContext = createContext({
   setActiveTask: () => {},
   activeBusinessContext: null,
   setActiveBusinessContext: () => {},
+  changeContentStatus: () => {},
 });
 
 const AppProvider = ({ children }) => {
   const [tasks, setTasks] = useState([]);
   const [activeTask, setActiveTask] = useState(null);
   const [activeBusinessContext, setActiveBusinessContext] = useState(null);
+
+  const changeContentStatus = (content) => {
+    activeTask.businessContext.forEach((item) => {
+      if (item === content) item.status = BUSINESS_CONTEXT_STATUS.activeTask;
+      else {
+        if (item.status === BUSINESS_CONTEXT_STATUS.activeTask)
+          item.status = BUSINESS_CONTEXT_STATUS.read;
+      }
+    });
+  };
 
   useEffect(() => {
     setTasks(tasksList);
@@ -45,6 +56,7 @@ const AppProvider = ({ children }) => {
         setActiveTask,
         activeBusinessContext,
         setActiveBusinessContext,
+        changeContentStatus,
       }}
     >
       {children}

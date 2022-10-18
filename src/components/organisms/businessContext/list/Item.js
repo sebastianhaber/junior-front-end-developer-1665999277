@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { BUSINESS_CONTEXT_STATUS } from "../../../../mocked/tasks";
 import { getFormattedDate } from "../../../../utils/time";
 import { StyledItem } from "./List.styles";

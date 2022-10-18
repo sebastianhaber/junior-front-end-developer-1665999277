@@ -5,10 +5,12 @@ import { StyledList } from "./List.styles";
 import { AppContext } from "../../../../context/Context";
 
 function ContextList() {
-  const { activeTask, setActiveBusinessContext } = useContext(AppContext);
+  const { activeTask, setActiveBusinessContext, changeContentStatus } =
+    useContext(AppContext);
 
   const handleChange = (item) => {
     setActiveBusinessContext(item);
+    changeContentStatus(item);
   };
 
   useEffect(() => {
