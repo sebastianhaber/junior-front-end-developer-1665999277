@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AppContext } from "../../../context/Context";
 import { tasksList, TASK_STATUS } from "../../../mocked/tasks";
 import ListItem from "./ListItem";
 import { StyledTasks } from "./styles";
 
-function Tasks({ setActiveTask }) {
+function Tasks() {
   const [tasks, setTasks] = useState(tasksList);
+  const { setActiveTask } = useContext(AppContext);
 
   const handleChange = (task) => {
     if (task.status !== TASK_STATUS.isBlocked) {
