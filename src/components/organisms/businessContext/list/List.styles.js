@@ -87,11 +87,11 @@ export const StyledItem = styled.li`
     color: #6b778c;
   }
 
+  // statuses
   ${(props) =>
     props.status === BUSINESS_CONTEXT_STATUS.activeTask
       ? `
           box-shadow: 0px 8px 16px rgba(84, 84, 84, 0.2);
-          
         `
       : props.status === BUSINESS_CONTEXT_STATUS.read &&
         `
