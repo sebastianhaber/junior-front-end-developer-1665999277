@@ -24,6 +24,8 @@ export function getFormattedDate(
   const hours = date.getHours();
   let minutes = date.getMinutes();
 
+  const suffix = getNumberSuffix(day);
+
   if (minutes < 10) {
     // Adding leading zero to minutes
     minutes = `0${minutes}`;
@@ -31,12 +33,12 @@ export function getFormattedDate(
 
   if (prefomattedDate) {
     // Today, 17th Dec
-    return `${prefomattedDate}, ${day} ${month}`;
+    return `${prefomattedDate}, ${day}${suffix} ${month}`;
   }
 
   if (short) {
     // Jan 10
-    return `${month} ${day}`;
+    return `${month} ${day}${suffix}`;
   }
 
   if (timeOnly) {
@@ -79,3 +81,16 @@ export function timeAgo(dateParam) {
 
   return getFormattedDate(date); // 10. January 2017. at 10:20
 }
+const getNumberSuffix = (number) => {
+  if (number > 3 && number < 21) return "th";
+  switch (number % 10) {
+    case 1:
+      return "st";
+    case 2:
+      return "nd";
+    case 3:
+      return "rd";
+    default:
+      return "th";
+  }
+};
