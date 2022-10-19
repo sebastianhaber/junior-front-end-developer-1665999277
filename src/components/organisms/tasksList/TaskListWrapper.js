@@ -1,13 +1,12 @@
-import React from "react";
-import { StyledTaskListWrapper } from "./styles";
-import Tasks from "./Tasks";
+import { StyledWrapper } from "./TaskListWrapper.styles";
+import TasksList from "./tasksList/TasksList";
 
 function TaskListWrapper() {
   return (
-    <StyledTaskListWrapper>
+    <StyledWrapper>
       <header>Your tasks</header>
-      <Tasks />
-    </StyledTaskListWrapper>
+      <TasksList />
+    </StyledWrapper>
   );
 }
 
