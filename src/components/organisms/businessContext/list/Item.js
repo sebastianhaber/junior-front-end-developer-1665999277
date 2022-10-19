@@ -16,10 +16,14 @@ function Item({ item, ...props }) {
 
   // substring title and content
   useEffect(() => {
-    const shortMessage = `${item.content.substring(0, 90)}...`;
-    const title = `${item.title.substring(0, 40)}...`;
+    const shortMessage =
+      item.content.length > 90
+        ? `${item.content.substring(0, 90)}...`
+        : item.content;
+    const substrTitle =
+      item.title.length > 40 ? `${item.title.substring(0, 40)}...` : item.title;
 
-    setTitle(title);
+    setTitle(substrTitle);
     setMessage(shortMessage);
   }, [item.content, item.title]);
 
