@@ -4,7 +4,7 @@ import { BUSINESS_CONTEXT_STATUS } from "../../../../mocked/tasks";
 import { StyledList } from "./List.styles";
 import { AppContext } from "../../../../context/Context";
 
-function ContextList() {
+function ContentList() {
   const { activeTask, setActiveBusinessContext, changeContentStatus } =
     useContext(AppContext);
 
@@ -46,4 +46,4 @@ function ContextList() {
   );
 }
 
-export default ContextList;
+export default ContentList;
