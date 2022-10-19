@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const StyledContent = styled.div`
   padding: 1rem 2rem;
+  flex: 3;
 
   p.title {
     font-weight: 600;
@@ -39,8 +40,22 @@ export const StyledContent = styled.div`
         font-size: 12px;
         line-height: 2;
 
-        max-width: 590px;
         width: 100%;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    padding: 0.5rem;
+    margin-top: 2rem;
+  }
+  @media (max-width: 500px) {
+    .wrapper {
+      flex-direction: column;
+      gap: 0;
+      &__content {
+        &__message {
+          width: fit-content;
+        }
       }
     }
   }

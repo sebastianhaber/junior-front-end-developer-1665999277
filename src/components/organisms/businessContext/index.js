@@ -3,7 +3,7 @@ import {
   StyledBusinessContextWrapper,
 } from "./BusinessContext.styles";
 import DiscoverIcon from "../../../assets/discover_icon.svg";
-import ContextList from "./list/ContextList";
+import ContentList from "./list/ContentList";
 import Content from "./content/Content";
 
 function BusinessContext() {
@@ -16,7 +16,7 @@ function BusinessContext() {
         </div>
       </header>
       <ContextWrapper>
-        <ContextList />
+        <ContentList />
         <Content />
       </ContextWrapper>
     </StyledBusinessContextWrapper>

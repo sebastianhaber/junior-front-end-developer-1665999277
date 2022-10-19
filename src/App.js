@@ -1,13 +1,13 @@
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
-import HomePage from "./components/homepage/HomePage";
+import Dashboard from "./components/pages/dashboard/Dashboard";
 
 function App() {
   return (
     <>
       <Header />
       <main>
-        <HomePage />
+        <Dashboard />
       </main>
       <Footer />
     </>

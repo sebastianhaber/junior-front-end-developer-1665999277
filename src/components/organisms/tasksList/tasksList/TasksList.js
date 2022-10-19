@@ -1,8 +1,8 @@
 import { useContext, useState } from "react";
-import { AppContext } from "../../../context/Context";
-import { tasksList, TASK_STATUS } from "../../../mocked/tasks";
-import ListItem from "./ListItem";
-import { StyledTasks } from "./styles";
+import { AppContext } from "../../../../context/Context";
+import { tasksList, TASK_STATUS } from "../../../../mocked/tasks";
+import ListItem from "../listItem/ListItem";
+import { StyledList } from "./TasksList.styles";
 
 function Tasks() {
   const [tasks, setTasks] = useState(tasksList);
@@ -23,11 +23,11 @@ function Tasks() {
   };
 
   return (
-    <StyledTasks>
+    <StyledList>
       {tasks.map((task, index) => (
         <ListItem key={index} task={task} onClick={() => handleChange(task)} />
       ))}
-    </StyledTasks>
+    </StyledList>
   );
 }
 

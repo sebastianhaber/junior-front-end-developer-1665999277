@@ -4,7 +4,7 @@ import { BUSINESS_CONTEXT_STATUS } from "../../../../mocked/tasks";
 import { StyledList } from "./List.styles";
 import { AppContext } from "../../../../context/Context";
 
-function ContextList() {
+function ContentList() {
   const { activeTask, setActiveBusinessContext, changeContentStatus } =
     useContext(AppContext);
 
@@ -15,11 +15,18 @@ function ContextList() {
 
   useEffect(() => {
     if (activeTask) {
-      setActiveBusinessContext(
-        activeTask.businessContext.find(
-          (item) => item.status === BUSINESS_CONTEXT_STATUS.activeTask
-        )
+      // find active item
+      const activeItem = activeTask.businessContext.find(
+        (item) => item.status === BUSINESS_CONTEXT_STATUS.activeTask
       );
+
+      // if activeItem was not found
+      // set active item to first item of an array
+      if (!activeItem) {
+        activeTask.businessContext[0].status =
+          BUSINESS_CONTEXT_STATUS.activeTask;
+        setActiveBusinessContext(activeTask.businessContext[0]);
+      } else setActiveBusinessContext(activeItem);
     }
   }, [activeTask, setActiveBusinessContext]);
 
@@ -39,4 +46,4 @@ function ContextList() {
   );
 }
 
-export default ContextList;
+export default ContentList;

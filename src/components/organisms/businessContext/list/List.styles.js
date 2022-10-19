@@ -2,13 +2,14 @@ import styled from "styled-components";
 import { BUSINESS_CONTEXT_STATUS } from "../../../../mocked/tasks";
 
 export const StyledList = styled.div`
-  width: 325px;
   height: 715px;
+  width: calc(304px + 0.5rem);
+
+  overflow-y: scroll;
 
   ul.wrapper {
     list-style: none;
     background-color: #f4f5f7;
-    height: 100%;
     border-bottom-left-radius: 12px;
 
     display: flex;
@@ -16,6 +17,14 @@ export const StyledList = styled.div`
     gap: 0.5rem;
 
     padding: 0.25rem;
+    height: 100%;
+  }
+  @media (max-width: 1100px) {
+    width: 100%;
+    height: auto;
+    ul.wrapper {
+      border-radius: 12px;
+    }
   }
 `;
 
@@ -27,8 +36,9 @@ export const StyledItem = styled.li`
 
   padding: 10px 20px;
 
-  height: 105px;
-  width: 304px;
+  min-height: 105px;
+  /* max-width: 304px; */
+  width: 100%;
 
   cursor: pointer;
   overflow: hidden;

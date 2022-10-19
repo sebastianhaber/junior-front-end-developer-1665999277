@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import Image from "../../../../utils/Image";
-import ImageUrl from "../../../../assets/mEZ3PoFGs_k.png";
 import { useState } from "react";
 import { useEffect } from "react";
 import { getFormattedDate, timeAgo } from "../../../../utils/time";
@@ -37,7 +36,7 @@ function Content() {
       <p className="title">{content.title}</p>
       <div className="wrapper">
         <div className="image-container">
-          <Image url={ImageUrl} alt={content.author.name} />
+          <Image url={content.author.imageUrl} alt={content.author.name} />
         </div>
         <div className="wrapper__content">
           <div className="wrapper__content__header">

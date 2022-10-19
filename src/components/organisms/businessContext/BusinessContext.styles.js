@@ -3,13 +3,16 @@ import styled from "styled-components";
 export const StyledBusinessContextWrapper = styled.section`
   flex: 1;
 
-  height: 785px;
+  min-height: 785px;
+  height: 100%;
+  /* min-width: 260px; */
 
   background-color: white;
   box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
 
   border-radius: 12px;
-  overflow: hidden;
+  overflow-y: auto;
+
   header {
     box-shadow: 0px 1px 0px #f4f5f7;
     padding: 0 3rem;
@@ -47,9 +50,18 @@ export const StyledBusinessContextWrapper = styled.section`
       }
     }
   }
+  @media (max-width: 768px) {
+    header {
+      padding: 0 1rem;
+    }
+  }
 `;
 export const ContextWrapper = styled.div`
   display: flex;
+
   padding: 0 0.25rem 0.25rem;
-  height: 100%;
+
+  @media (max-width: 1100px) {
+    flex-direction: column;
+  }
 `;

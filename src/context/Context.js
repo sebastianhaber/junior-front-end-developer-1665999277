@@ -1,6 +1,4 @@
-import { useState } from "react";
-import { useEffect } from "react";
-import { createContext } from "react";
+import { useState, useEffect, createContext } from "react";
 import {
   BUSINESS_CONTEXT_STATUS,
   tasksList,
@@ -22,12 +20,12 @@ const AppProvider = ({ children }) => {
   const [activeTask, setActiveTask] = useState(null);
   const [activeBusinessContext, setActiveBusinessContext] = useState(null);
 
+  // logic of clicking on messages
   const changeContentStatus = (content) => {
     activeTask.businessContext.forEach((item) => {
       if (item === content) item.status = BUSINESS_CONTEXT_STATUS.activeTask;
-      else {
-        if (item.status === BUSINESS_CONTEXT_STATUS.activeTask)
-          item.status = BUSINESS_CONTEXT_STATUS.read;
+      else if (item.status === BUSINESS_CONTEXT_STATUS.activeTask) {
+        item.status = BUSINESS_CONTEXT_STATUS.read;
       }
     });
   };
