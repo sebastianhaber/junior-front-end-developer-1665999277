@@ -11,6 +11,7 @@ export const StyledFooter = styled.footer`
   color: #6b778c;
 
   margin: 1rem 0;
+
   ul {
     display: flex;
     gap: 1rem;

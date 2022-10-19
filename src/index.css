@@ -12,6 +12,7 @@ body {
   height: 900px;
   margin: 0 auto;
   padding: 0 2rem;
+  color: #242325;
 }
 main {
   min-height: calc(100vh - 100px);
