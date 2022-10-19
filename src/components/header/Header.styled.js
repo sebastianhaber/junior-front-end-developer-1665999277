@@ -8,4 +8,9 @@ export const StyledHeader = styled.nav`
   img {
     display: block;
   }
+  @media (max-width: 500px) {
+    img#logo {
+      width: 120px;
+    }
+  }
 `;

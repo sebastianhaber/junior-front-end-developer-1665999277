@@ -5,14 +5,19 @@
   padding: 0;
   box-sizing: border-box;
 }
-html,
 body {
   font-family: "Poppins", sans-serif;
   background-color: #f4f5f7;
   max-width: 1440px;
+  height: 900px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 main {
   min-height: calc(100vh - 100px);
+}
+@media (max-width: 768px) {
+  body {
+    padding: 0 1rem;
+  }
 }
